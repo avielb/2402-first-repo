@@ -11,12 +11,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Create a File
-        run: echo "Hello, this is a sample artifact file." > example.txt
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+      - run: mkdir -p test
+      - run: echo hello > test/world.txt
+      - uses: actions/upload-artifact@v4
         with:
-          name: example-artifact
-          path: example.txt
+          name: my-artifact
+          path: test/world.txt
