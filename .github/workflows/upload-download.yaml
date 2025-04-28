@@ -30,4 +30,4 @@ jobs:
         with:
           name: my-artifact
       - name: Print file content
-        run: cat my-artifact/world.txt
+        run: cat world.txt
